@@ -1,0 +1,33 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+
+        Console.WriteLine("Podaj pierwszą liczbę:");
+        double a = double.Parse(Console.ReadLine());
+        Console.WriteLine("Podaj drugą liczbę:");
+        double b = double.Parse(Console.ReadLine());
+        Console.WriteLine("Podaj trzecią liczbę:");
+        double c = double.Parse(Console.ReadLine());
+
+        double najwieksza;
+        if (a > b)
+        {
+            if (a > c)
+                najwieksza = a;
+            else
+                najwieksza = c;
+        }
+        else
+        {
+            if (b > c)
+                najwieksza = b;
+            else
+                najwieksza = c;
+        }
+
+        Console.WriteLine($"Największa liczba to: {najwieksza}");
+    }
+}
