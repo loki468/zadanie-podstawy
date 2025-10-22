@@ -1,0 +1,17 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+
+        Console.WriteLine("Podaj pierwszą liczbę:");
+        double liczba1 = double.Parse(Console.ReadLine());
+
+        Console.WriteLine("Podaj drugą liczbę:");
+        double liczba2 = double.Parse(Console.ReadLine());
+
+        double srednia = (liczba1 + liczba2) / 2;
+        Console.WriteLine($"Średnia arytmetyczna: {srednia}");
+    }
+}
