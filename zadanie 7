@@ -1,0 +1,17 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        double a = Math.Pow(Math.Sqrt(2), Math.Sqrt(3));
+        double b = Math.Pow(Math.Sqrt(3), Math.Sqrt(2));
+
+        if (a > b)
+            Console.WriteLine("wieksza jest dwa do potęgi pierwiastek z trzech");
+        else if (b > a)
+            Console.WriteLine("wieksza jest pierwiastek z trzech do potęgi pierwiastek z dwóch");
+        else
+            Console.WriteLine("Obie liczby są równe");
+    }
+}
