@@ -1,0 +1,31 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        
+        Console.Write("Podaj liczbe z przedziału 1 do 999: ");
+        int liczba = int.Parse(Console.ReadLine());
+
+        if (liczba < 1 || liczba > 999)
+        {
+            Console.WriteLine("Liczba spoza dozwolonego zakresu 1 do 999");
+            return;
+        }
+
+        int sumaCyfr = 0;
+        int temp = liczba;
+
+        while (temp > 0)
+        {
+            sumaCyfr += temp % 10; 
+            temp /= 10;            
+        }
+
+        if (sumaCyfr % 3 == 0)
+            Console.WriteLine($"Liczba {liczba} jest podzielna przez 3");
+        else
+            Console.WriteLine($"Liczba {liczba} nie jest podzielna przez ");
+    }
+}
