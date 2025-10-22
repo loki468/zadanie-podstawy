@@ -1,0 +1,30 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.WriteLine("Podaj pierwszą liczbę:");
+        double a = double.Parse(Console.ReadLine());
+        Console.WriteLine("Podaj drugą liczbę:");
+        double b = double.Parse(Console.ReadLine());
+        Console.WriteLine("Podaj trzecią liczbę:");
+        double c = double.Parse(Console.ReadLine());
+
+        if (a == b || a == c || b == c)
+        {
+            Console.WriteLine("Liczby nie są różne. Program zakończony.");
+            return;
+        }
+
+        double srodkowa;
+        if ((a > b && a < c) || (a < b && a > c))
+            srodkowa = a;
+        else if ((b > a && b < c) || (b < a && b > c))
+            srodkowa = b;
+        else
+            srodkowa = c;
+
+        Console.WriteLine($"Środkowa liczba to: {srodkowa}");
+    }
+}
