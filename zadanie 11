@@ -1,0 +1,58 @@
+using System;
+
+class Program
+{
+    static void Main()
+    {
+        Console.Write("Podaj pierwsza liczba ");
+        int a = int.Parse(Console.ReadLine());
+        Console.Write("Podaj druga liczba  ");
+        int b = int.Parse(Console.ReadLine());
+
+        if (a <= 0 || b <= 0)
+        {
+            Console.WriteLine("Liczby musza byc dodatnie");
+            return;
+        }
+
+        Console.WriteLine("Wybierz operację (+, -, *, /) ");
+        char operacja = Console.ReadKey().KeyChar;
+        Console.WriteLine();
+
+        double w;
+
+        switch (operacja)
+        {
+            case '+':
+                w = a + b;
+                Console.WriteLine($"Wynik dodawania {w}");
+                break;
+
+            case '-':
+                w = a - b;
+                Console.WriteLine($"Wynik odejmowania {w}");
+                break;
+
+            case '*':
+                w = a * b;
+                Console.WriteLine($"Wynik mnożenia {w}");
+                break;
+
+            case '/':
+                if (b != 0)
+                {
+                    w = (double)a / b;
+                    Console.WriteLine($"Wynik dzielenia {w}");
+                }
+                else
+                {
+                    Console.WriteLine("Nie mozna dzielic przez zero");
+                }
+                break;
+
+            default:
+                Console.WriteLine("Niepoprawny symbol operacji");
+                break;
+        }
+    }
+}
